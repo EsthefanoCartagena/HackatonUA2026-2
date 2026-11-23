@@ -128,4 +128,7 @@ INSERT INTO chat_token (token_hash, id_tramite, id_incidencia, destinatario_tipo
 ('tok_demo_trm001_ciudadano', 1, NULL, 'CIUDADANO', 'CHAT_ESCRITURA', NOW() + INTERVAL '7 days', FALSE),
 ('tok_demo_trm004_incidencia', 4, 3, 'CIUDADANO', 'CHAT_ESCRITURA', NOW() + INTERVAL '7 days', FALSE);
 
-INSERT INTO mensaje_chat (id_token, remitente_
+INSERT INTO mensaje_chat (id_token, remitente_rol, contenido, metadatos_json) VALUES
+(1, 'SISTEMA', 'Hola Rosa María, tu trámite TRM-2026-001 está en proceso. Puedes responder por aquí o dictar tu mensaje.', '{"voz_habilitada": true}'),
+(1, 'ADMIN', 'Buen día Sra. Rosa, ya reservamos su cupo para este jueves a las 9:00 AM.', '{"operador": "María Elena"}'),
+(2, 'ADMIN', 'Hola Jorge Luis, por favor sube una foto más nítida de tu recibo de luz usando este enlace.', '{"modo": "solo_texto"}');
